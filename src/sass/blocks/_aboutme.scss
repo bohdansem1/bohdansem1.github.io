@@ -1,0 +1,84 @@
+.aboutMe{
+   margin-top: 120px;
+   width: 100%;
+
+   &__elements{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      column-gap: 70px;
+   }
+   .presubtitle{
+      margin-bottom: 0px;
+      z-index: 2;
+      padding-left: 10px;
+      @include before_circle;
+      position: relative;
+   }
+   .subtitle{
+      margin-bottom: 0px;
+   }
+   &__txt_divider{
+      width: 60px;
+      height: 3px;
+      background-color: $main-color2;
+      margin-bottom: 20px;
+   }
+   &__txt{
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      row-gap: 40px;
+
+
+     
+   }
+   &__txt_services{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 40px;
+      column-gap: 50px;
+      
+      .element{
+         display: grid;
+         grid-template-columns: 60px auto;
+         &_descr{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            width: 200px;
+            min-height: 89px;
+            color: #000;
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            
+            
+         }
+         &_pic{
+            margin-top: 15px;
+            z-index: 3;
+            
+           
+         }
+         &_name{
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            padding-left: 10px;
+            @include before_circle;
+            position: relative  
+            
+            
+         }
+         &_name:before{
+            top: 0%;
+            left: -40%;
+            z-index: -1;
+         }
+         
+      }
+      
+   }
+
+}
