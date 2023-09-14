@@ -10,8 +10,14 @@
 @import '../../node_modules/animate.css/animate.min.css';
 @import 'blocks/menu';
 @import 'blocks/aboutme';
+@import 'blocks/resume';
 
-
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: $main-color2;
+    margin: 20px auto 0 auto;
+}
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -19,6 +25,6 @@
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 };

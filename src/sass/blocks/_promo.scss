@@ -4,7 +4,7 @@
    background: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1) ),url('../img/main.jpg') no-repeat 50%/cover;
    padding-top: 180px;
    &__title{
-      width: 535px;
+      max-width: 535px;
       margin-top: .625rem;
     
    }
