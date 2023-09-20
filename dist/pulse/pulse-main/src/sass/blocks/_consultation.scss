@@ -1,0 +1,36 @@
+.consultation{
+    
+    font-family: MuseoModerno;
+    min-height: 680px;
+    padding: 100px 0 92px 0;
+    background: url(../img/consultation.jpg) center (center/cover) no-repeat;
+    &__descr{
+    font-family: MuseoModerno;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    }
+
+    label.error{
+        color: #ffffff8f;
+        border: none;
+        margin-bottom: 15px;
+    }
+    .error{
+        border: 1px solid red;
+        
+    }
+ 
+}
+
+@media screen and (max-width: 420px){
+    .consultation{
+        padding: 50px 5px 50px 5px;
+        .title_left {
+            font-size: 26px;
+            line-height: 40px;
+         
+        }
+    }
+}

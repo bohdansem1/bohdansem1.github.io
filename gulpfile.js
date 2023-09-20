@@ -57,6 +57,13 @@ gulp.task("fonts", function () {
 		.pipe(browserSync.stream());
 });
 
+gulp.task("mailer", function () {
+	return gulp
+		.src("mailer/**/*")
+		.pipe(gulp.dest("dist/mailer"))
+		.pipe(browserSync.stream());
+});
+
 gulp.task("icons", function () {
 	return gulp
 		.src("src/icons/**/*")
@@ -79,6 +86,7 @@ gulp.task(
 		"styles",
 		"scripts",
 		"fonts",
+		"mailer",
 		"icons",
 		"html",
 		"images"

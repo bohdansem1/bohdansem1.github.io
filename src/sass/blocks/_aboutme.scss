@@ -23,7 +23,7 @@
    }
    .presubtitle{
       margin-bottom: 0px;
-      z-index: 2;
+      z-index: 0;
       padding-left: 10px;
       @include before_circle;
       position: relative;
@@ -56,16 +56,19 @@
       justify-items: center;
       
       .element{
+         position: relative;
+         top: 0;
          display: grid;
          grid-template-columns: 40px auto;
+         align-content: center;
          &_descr{
             grid-column-start: 2;
             grid-column-end: 3;
             width: 200px;
-            min-height: 89px;
+            min-height: 105px;
             color: #000;
-            font-family: Poppins;
-            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
             font-style: normal;
             font-weight: 500;
             

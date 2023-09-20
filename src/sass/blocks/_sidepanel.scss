@@ -19,8 +19,7 @@
          height: 20px;
          transition: 0.2s ease-in-out;
          &:hover{
-            border-radius: 100%;
-            box-shadow: 0px 0px 5px 5px $main-color2;
+            filter: drop-shadow(0px 0px 3px  $main-color2);
             transform: scale(1.2);
             
             
