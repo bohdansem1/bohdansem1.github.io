@@ -25,6 +25,7 @@
 		"last 2 ios versions"
 	],
 	"dependencies": {
-		"animate.css": "^4.1.1"
+		"animate.css": "^4.1.1",
+		"axios": "^1.5.1"
 	}
 }

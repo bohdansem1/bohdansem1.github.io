@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
@@ -431,7 +431,7 @@
             </div>
           </div>
           <div class="contacts__input" id="form">
-            <form class="contacts-form" action="#!">
+            <form class="contacts-form" method="post" action="/smart.php">
               <div class="form-group form-group-name">
                 <label for="name">Ваше Ім'я</label>
                 <input name="name" required id="name" placeholder="Тарас Григорович" type="text">
@@ -469,7 +469,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 
 </html>
