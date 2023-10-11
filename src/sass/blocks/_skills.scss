@@ -42,7 +42,8 @@
    &__wrapper{
       margin-top: 60px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, 270px);
+      justify-content: center;
       gap: 13px;
    }
 
@@ -52,7 +53,8 @@
       display: grid;
       column-gap: 45px;
       row-gap: 30px;
-      grid-template-columns: repeat(3, 350px);
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
       &-item{
          width: 100%;
          display: grid;
@@ -66,9 +68,9 @@
          z-index: 2;
          @include before_circle;
          &:before{
-           background: $main-color2
+            background: $main-color2
          }  
-        
+
       }
 
       &-counter{
