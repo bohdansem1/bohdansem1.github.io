@@ -61,6 +61,20 @@
          row-gap: 20px;
          grid-template-rows: repeat(2, 1fr);
          grid-template-columns: repeat(2, 1fr);
+         text-decoration: none;
+         color: #000;
+         // .skills-link{
+         //    text-decoration: none;
+         //    color:#000;
+         // }
+         // .skills-link:hover{
+         //    text-decoration: none;
+         //    color:#000;
+         // }
+      }
+      &-item:hover{
+         text-decoration: none;
+         color: #000;
       }
       &-title{
          padding-left: 13px;
