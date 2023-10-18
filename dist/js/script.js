@@ -153,15 +153,20 @@ $(document).ready(function(){
           parse_mode: 'html',
           text: message
         })
-        $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
-        }).done(function(){
-            $(this).find("input").val("");
-            $('#thanks, .overlay').fadeIn();
-            $('form').trigger('reset');
+        .then(function(){
+          $(this).find("input").val("");
+          $('#thanks, .overlay').fadeIn();
+          $('form').trigger('reset');
         });
+        // $.ajax({
+        //     type: "POST",
+        //     url: "mailer/smart.php",
+        //     data: $(this).serialize()
+        // }).done(function(){
+        //     $(this).find("input").val("");
+        //     $('#thanks, .overlay').fadeIn();
+        //     $('form').trigger('reset');
+        // });
       return false;
     });
 
