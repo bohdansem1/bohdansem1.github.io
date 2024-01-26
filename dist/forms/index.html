@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Forms</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header--margin">
+			I'm HeadeR
+		</header>
+
+		<main class="page">
+			<div class="contact-form contact-form--margin ">
+				<div class="contact-form__title title">
+					<h2 class="title__contact">Contact Us</h2>
+					<h2 class="title__text">Request A Call Back !</h2>
+				</div>
+				<form enctype="multipart/form-data" id="call-back" class="form form--margin" action="#" method="GET">
+					<div class="form__body"> <!-- Тіло форми -->
+						<div class="form__item"> <!-- обгортка інпута -->
+							<input required id="name" placeholder="Your name" name="name" type="text"> <!-- сам інпут -->
+						</div>
+						<div class="form__item">
+							<input required id="email" placeholder="Email Address" name="email" type="email">
+						</div>
+						<div class="form__item">
+							<input placeholder="Phone Number" name="phone" type="tel">
+						</div>
+						<div class="form__item">
+							<input placeholder="Subject" name="subject" type="text">
+						</div>
+						<div class="form__item form__item--textarea">
+							<textarea name="message" class="form__textarea" placeholder="Message..."></textarea>
+						</div>
+					</div>
+				</form>
+				<button form="call-back" class="contact-form__btn" type="submit">Submit</button>
+			</div>
+			<div class="my-info my-info--margin">
+				<h2 class="my-info__title">My Info</h2>
+				<h2 class="my-info__sub-title">Add Address</h2>
+				<form action="#" method="GET" enctype="multipart/form-data" class="info-form">
+					<div class="info-form__body">
+						<div class="info-form__item">
+							<label class="info-form__label" for="f-name">First Name*</label>
+							<input required placeholder="First Name" id="f-name" name="name" type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="f-name">Last Name*</label>
+							<input required placeholder="Last Name" id="l-name" name="last-name" type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="country">Country / Region*</label>
+							<input required placeholder="Country / Region" id="country" name="name" type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="company">Company Name</label>
+							<input placeholder="Company (optional)" id="company" name="name" type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="street">Street Address*</label>
+							<input required placeholder="House number and street name" id="street" name="name" type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="apartment">Apt, suite, unit</label>
+							<input placeholder="apartment, suite, unit, etc. (optional)" id="apartment" name="apartment"
+								type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="city">City*</label>
+							<input required placeholder="Town / City" id="city" name="city" type="text">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="state">State*</label>
+							<select id="state" name="state">
+								<option value="" selected hidden>State</option>
+								<option value="Arizona">Arizona</option>
+								<option value="California">California</option>
+								<option value="Idaho">Idaho</option>
+								<option value="Ohio">Ohio</option>
+							</select>
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="phone">Phone*</label>
+							<input required placeholder="Phone" id="phone" name="phone" type="tel">
+						</div>
+						<div class="info-form__item">
+							<label class="info-form__label" for="post-code">Postal Code*</label>
+							<input required placeholder="Postal Code" id="post-code" name="post-code" type="text">
+						</div>
+						<div class="info-form__item info-form__item--textarea">
+							<label class="info-form__label" for="delivery-instrucrion">Delivery Instruction</label>
+							<textarea name="message" id="delivery-instrucrion" class="info-form__textarea"
+								placeholder="Delivery Instruction">
+							</textarea>
+						</div>
+					</div>
+					<div class="info-form__checkbox info-form__checkbox--ship">
+						<input id="default-shipping" class="custom-checkbox" name="default-shipping" type="checkbox">
+						<label class="info-form__label" for="default-shipping">Set as default shipping address</label>
+					</div>
+					<br>
+					<div class="info-form__checkbox info-form__checkbox--bill">
+						<input id="default-billing" class="custom-checkbox" name="default-billing" type="checkbox">
+						<label class="info-form__label" for="default-billing">Set as default billing address</label>
+					</div>
+					<div class="info-form__buttons">
+						<button class="info-form__button info-form__button--save" type="submit">
+							Save
+						</button>
+						<button class="info-form__button info-form__button--cancel" type="reset">
+							Cancel
+						</button>
+					</div>
+				</form>
+			</div>
+			<!-- 	Далі я напевно трохи намудрував з перевикористанням блоків, хотів би почути як це краще робити, але валідатор ніби як пропускає😅 -->
+			<div class="my-info my-info--margin my-info--check-out">
+				<h2 class="my-info__title my-info__title--check-out">Check Out</h2>
+				<h2 class="my-info__sub-title my-info__sub-title--check-out">Billing Details</h2>
+				<form action="#" method="GET" enctype="multipart/form-data" class="info-form info-form--check-out">
+					<div class="info-form__body info-form__body--check-out">
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="info-f-name">First Name*</label>
+							<input required placeholder="First Name" id="info-f-name" name="name" type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="first-name">Last Name*</label>
+							<input required placeholder="Last Name" id="first-name" name="name" type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="country-checkout">Country / Region*</label>
+							<input required placeholder="Country / Region" id="country-checkout" name="name" type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="company-checkout">Company Name</label>
+							<input placeholder="Company (optional)" id="company-checkout" name="name" type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="street-checkout">Street Address*</label>
+							<input required placeholder="House number and street name" id="street-checkout" name="name"
+								type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="apartment-checkout">Apt, suite, unit</label>
+							<input placeholder="apartment, suite, unit, etc. (optional)" id="apartment-checkout"
+								name="apartment" type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out info-form__item--col3">
+							<label class="info-form__label" for="city-checkout">City*</label>
+							<input required placeholder="Town / City" id="city-checkout" name="city" type="text">
+						</div>
+						<div class="info-form__item  info-form__item--check-out info-form__item--col3">
+							<label class="info-form__label" for="state-checkout">State*</label>
+							<select id="state-checkout" name="state">
+								<option value="" selected hidden>State</option>
+								<option value="Arizona">Arizona</option>
+								<option value="California">California</option>
+								<option value="Idaho">Idaho</option>
+								<option value="Ohio">Ohio</option>
+							</select>
+						</div>
+						<div class="info-form__item info-form__item--check-out info-form__item--col3">
+							<label class="info-form__label" for="info-post-code">Postal Code*</label>
+							<input required placeholder="Postal Code" id="info-post-code" name="post-code" type="text">
+						</div>
+						<div class="info-form__item info-form__item--check-out">
+							<label class="info-form__label" for="info-phone">Phone*</label>
+							<input required placeholder="Phone" id="info-phone" name="info-phone" type="tel">
+						</div>
+					</div>
+					<div class="info-form__buttons">
+						<button class="info-form__button info-form__button--save info-form__button--continue btn"
+							type="submit">
+							Continue to delivery
+						</button>
+					</div>
+					<div class="info-form__checkbox info-form__checkbox--save">
+						<input id="save-check" class="custom-checkbox custom-checkbox--check-out" name="save-check"
+							type="checkbox">
+						<label class="info-form__label" for="save-check">Save my information for a faster checkout</label>
+					</div>
+
+				</form>
+			</div>
+			<form enctype="multipart/form-data" id="payment-form" class="delivery-form" action="#" method="GET">
+				<div class="shipp-adress">
+					<hr>
+					<h2 class="shipp-adress__title">Shipping Address</h2>
+					<h2 class="shipp-adress__subtitle subtitle">
+						Select the address that matches your card or payment method.
+					</h2>
+				</div>
+				<div class="delivery-form__item item-delivery">
+					<div class="item-delivery__wrapper-input item-delivery__wrapper-input--adress">
+						<input checked class="item-delivery__input" id="delivery-form__adress" required value="yes"
+							name="adress" type="radio">
+						<label class="delivery-form__label" for="delivery-form__adress">Same as Billing address</label>
+					</div>
+					<hr class="item-delivery__line">
+					<div class="item-delivery__wrapper-input item-delivery__wrapper-input--adress">
+						<input class="item-delivery__input" id="different-adress" required value="yes" name="adress"
+							type="radio">
+						<label class="delivery-form__label" for="different-adress">Use a
+							different shipping address</label>
+					</div>
+				</div>
+				<div class="shipp-adress shipp-adress--method">
+					<hr>
+					<h2 class="shipp-adress__title shipp-adress__title--method">Shipping Method</h2>
+				</div>
+				<div class="delivery-form__item item-delivery">
+					<div class="item-delivery__wrapper-input wrapper-input">
+						<div class="delivery-form__label">
+							Arrives by Monday, June 7
+						</div>
+					</div>
+					<hr class="item-delivery__line">
+					<div class="item-delivery__wrapper-input wrapper-input">
+						<div class="delivery-form__label delivery-form__label--flex">
+							Delivery Charges
+							<span class="wrapper-input__price">$5.00</span>
+						</div>
+						<h2 class="subtitle subtitle--method">
+							Select the address that matches your card or payment method.
+						</h2>
+					</div>
+				</div>
+				<div class="shipp-adress">
+					<hr>
+					<h2 class="shipp-adress__title title title--payment">Payment Method</h2>
+					<h2 class="shipp-adress__subtitle subtitle subtitle--payment shipp-adress__subtitle subtitle">
+						All transactions are secure and encrypted.
+					</h2>
+				</div>
+				<div class="delivery-form__item item-delivery item-delivery--payment">
+					<div class="item-delivery__wrapper-input item-delivery__wrapper-input--payment">
+						<input checked class="item-delivery__input" id="credit" required value="yes" name="payment"
+							type="radio">
+						<label class="delivery-form__label" for="credit">Credit Card</label>
+						<h2 class="subtitle subtitle--margin">
+							We accept all major credit cards.
+						</h2>
+						<div class="item-delivery__pic">
+							<img src="img/gpay.png" alt="Google Pay">
+							<img src="img/visa.png" alt="VISA">
+							<img src="img/paypal.png" alt="PayPal">
+							<img src="img/paypass.png" alt="paypass">
+						</div>
+						<div class="item-delivery__card-info card-info">
+							<input autocomplete="on" type="text" name="card-number" placeholder="Card Number" id="card-number">
+							<input type="text" name="card-name" placeholder="Name of card" id="card-name">
+							<input type="text" name="card-date" placeholder="Expiration date (MM/YY)" id="card-date">
+							<input type="password" name="card-code" placeholder="Security Code" id="card-code">
+						</div>
+					</div>
+					<hr class="item-delivery__line">
+					<div class="item-delivery__wrapper-input item-delivery__wrapper-input--payment">
+						<input class="item-delivery__input" id="cash" required value="yes" name="payment" type="radio">
+						<label class="delivery-form__label" for="cash">Cash on delivery</label>
+						<h2 class="subtitle subtitle--padding">
+							Pay with cash upon delivery.
+						</h2>
+					</div>
+					<hr class="item-delivery__line">
+					<div class="item-delivery__wrapper-input item-delivery__wrapper-input--payment">
+						<input class="item-delivery__input" id="paypal" required value="yes" name="payment" type="radio">
+						<label class="delivery-form__label" for="paypal">Paypal</label>
+					</div>
+				</div>
+				<button class="btn" type="submit">
+					Pay Now
+				</button>
+			</form>
+		</main>
+
+		<footer class="footer">
+			I'm FooteR
+		</footer>
+	</div>
+</body>
+
+</html>
