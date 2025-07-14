@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  const hamburgerMenu = document.querySelector('.hamburger');// Кнока меню в правій верхній частині екрану
-  const menuCloseItem = document.querySelector('.menu__close');//Хрестик для закривання меню в правій верхній частині екрану
-  const menu = document.querySelector('.menu');// 
+  const hamburgerMenu = document.querySelector('.hamburger');
+  const menuCloseItem = document.querySelector('.menu__close');
+  const menu = document.querySelector('.menu');
   hamburgerMenu.addEventListener('click', () => {
   menu.classList.add('active');
 
@@ -12,25 +12,6 @@ $(document).ready(function(){
   menu.addEventListener('click', () => {
       menu.classList.remove('active');
       });
-
-
-  // function reveal() {
-  //   var reveals = document.querySelectorAll(".reveal");
-
-  //   for (var i = 0; i < reveals.length; i++) {
-  //     var windowHeight = window.innerHeight;
-  //     var elementTop = reveals[i].getBoundingClientRect().top;
-  //     var elementVisible = 75;
-
-  //     if (elementTop < windowHeight - elementVisible) {
-  //       reveals[i].classList.add("animate__fadeIn");
-  //     } else {
-  //       reveals[i].classList.remove("animate__fadeIn");
-  //     }
-  //   }
-  // }
-  // window.addEventListener("scroll", reveal);
-
       
   (function(){
     const counters = document.querySelectorAll('.skills__raitings-counter'), 
@@ -44,54 +25,10 @@ $(document).ready(function(){
 
   }());
 
-  // $('.button_submit').on('click', function() {
-  //   $('.overlay, #thanks').fadeIn('slow');
-    
-  // });
   $('.modal__close').on('click', function() {
       $('.overlay, #thanks').fadeOut('slow');
   });
-  // $('.catalog-item__btn').each(function(i){
-  //     $(this).on('click', function() {
-  //         $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-  //         $('.overlay, #order').fadeIn('slow');
-  //     });
-  // });
-    
-        
-        
 
-
-  //       // scrool
-        
-  // ($)(document).ready(function(){
-  //   // Add smooth scrolling to all links
-  //   $("a").on('click', function(event) {
-
-  //     // Make sure this.hash has a value before overriding default behavior
-  //     if (this.hash !== "") {
-  //       // Prevent default anchor click behavior
-  //       event.preventDefault();
-
-  //       // Store hash
-  //       var hash = this.hash;
-
-  //       // Using jQuery's animate() method to add smooth page scroll
-  //       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-  //       $('html, body').animate({
-  //         scrollTop: $(hash).offset().top
-  //       }, 800, function(){
-
-  //         // Add hash (#) to URL when done scrolling (default click behavior)
-  //         window.location.hash = hash;
-  //       });
-  //     } // End if
-  //   });
-  // });
-
-      
-      
-      
   (function () {
     $('.contacts-form').validate({
         rules:{
@@ -111,33 +48,10 @@ $(document).ready(function(){
 
     });
 
-        // Відправка повідомлення з даними в телеграм канал через бота.--->>>>
-
+    // Відправка повідомлення з даними в телеграм канал через бота.--->>>>
     const TOKEN = "6409988498:AAFQJa2GYe5YoQ6N_J3afM81jKyqc1plJAw";
     const CHAT_ID = "-1001970201977";
     const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-    // function sendMessageTg(){ 
-    //   document.getElementById("tg").addEventListener("submit", function(e) {
-    //     // e.preventDefault();
-    //     let message = `<b> Заявка з сайту!</b>\n`;
-    //     message += `<b>Відправник:</b> ${this.name.value}\n`;
-    //     message += `<b>Пошта:</b> ${this.email.value}\n`;
-    //     message += `<b>Повідомлення:</b> <i>${this.message.value}</i>\n`;
-    //     axios.post(URL_API, {
-    //       chat_id: CHAT_ID,
-    //       parse_mode: 'html',
-    //       text: message
-    //     })
-
-        
-    
-    //   });
-    // }
-
-
-  
-      
-  
 
     $('form').submit(function(e){
       e.preventDefault();
@@ -158,23 +72,9 @@ $(document).ready(function(){
           $('#thanks, .overlay').fadeIn();
           $('form').trigger('reset');
         });
-        // $.ajax({
-        //     type: "POST",
-        //     url: "mailer/smart.php",
-        //     data: $(this).serialize()
-        // }).done(function(){
-        //     $(this).find("input").val("");
-        //     $('#thanks, .overlay').fadeIn();
-        //     $('form').trigger('reset');
-        // });
       return false;
     });
-
-
-
   }()); 
-
-
 
   function determineTimeOfDay() {
     const hour = new Date().getHours();
@@ -195,7 +95,6 @@ $(document).ready(function(){
 
 // paralax 
 window.addEventListener('scroll', e => {
-// document.body.style.cssText += `--scrollTop: ${this.scrollY}px`
 document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
 })
 
@@ -205,16 +104,10 @@ ScrollSmoother.create({
 wrapper: '.paralax-wrapper',
 content: '.paralax-content',
 smooth: 1.8
-// effects: true
 });
-
-
 
 gsap.registerPlugin(ScrollToPlugin);
 
-
-
-// gsap . set ( "html, body" , { scrollBehavior : "auto" });  
 function getSamePageAnchor (link) {
 if (
   link.protocol !== window.location.protocol ||
@@ -236,14 +129,6 @@ if(elem) {
   gsap.to(window, {scrollTo: elem});
 }
 }
-// Scroll to a given hash, preventing the event given if there is one
-function scrollToHash(hash, e) {
-const elem = hash ? document.querySelector(hash) : false;
-if(elem) {
-  if(e) e.preventDefault();
-  gsap.to(window, {scrollTo: elem});
-}
-}
 
 // If a link's href is within the current page, scroll to it instead
 document.querySelectorAll('a[href]').forEach(a => {
@@ -254,7 +139,6 @@ a.addEventListener('click', e => {
 
 // Scroll to the element in the URL's hash on load
 scrollToHash(window.location.hash);
-
 
   //scroll up
   ($)(window).scroll(function(){
